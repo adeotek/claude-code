@@ -1,0 +1,13 @@
+{
+  "name": "context-checkpoint",
+  "version": "1.0.0",
+  "description": "Save and restore named session checkpoints so you can pick up exactly where you left off across Claude Code sessions.",
+  "author": {
+    "name": "George Benjamin",
+    "email": "george.benjamin@gmail.com"
+  },
+  "homepage": "https://github.com/adeotek/claude-code",
+  "repository": "https://github.com/adeotek/claude-code",
+  "license": "MIT",
+  "keywords": ["context", "session", "checkpoint", "memory", "save", "restore", "productivity"]
+}

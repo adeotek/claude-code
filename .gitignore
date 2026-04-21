@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Plugin runtime artifacts
+.memory/
+
+# Python (for any future skill scripts)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Node (for any future skill scripts)
+node_modules/

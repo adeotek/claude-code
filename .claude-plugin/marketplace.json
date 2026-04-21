@@ -1,0 +1,19 @@
+{
+  "name": "adeotek-plugins",
+  "owner": {
+    "name": "George Benjamin",
+    "email": "george.benjamin@gmail.com"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by George Benjamin",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "context-checkpoint",
+      "source": "context-checkpoint",
+      "description": "Save and restore named session checkpoints across Claude Code sessions.",
+      "category": "productivity"
+    }
+  ]
+}
