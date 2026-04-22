@@ -1,6 +1,6 @@
 ---
 name: save-context
-description: This skill should be used when the user asks to "save this session", "save the current context", "save progress", "checkpoint this work", "save as X", "save context as X", "remember this session as X", or mentions saving or capturing the current work state to a named file for later recall.
+description: This skill should be used when the user asks to "save this session", "save the current context", "save progress", "checkpoint this work", "save as X", "save context as X", "save context X", "remember this session as X", or mentions saving or capturing the current work state to a named file for later recall. Also use when the user invokes /context-checkpoint:save-context with just a checkpoint name as the argument (e.g., "/context-checkpoint:save-context auth-work").
 ---
 
 # Save Context

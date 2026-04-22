@@ -25,7 +25,7 @@ Or directly from this repository:
 
 ## Skills
 
-After installation, two skills are available:
+After installation, three skills are available:
 
 ### `/context-checkpoint:save-context`
 
@@ -36,6 +36,7 @@ Summarizes the current session and saves it to `.memory/<name>.md`.
 - `"save context as feature-xyz"`
 - `"checkpoint this work as payment-refactor"`
 - `"remember this session as db-migration"`
+- `"save context auth-work"` (no "as" required when the name is clear)
 
 **What gets saved:**
 - **Goal** — what was being worked on and why
@@ -46,7 +47,7 @@ Summarizes the current session and saves it to `.memory/<name>.md`.
 - **Notes** — caveats, gotchas, or context that's easy to forget
 - **Git state** — current branch and last 3 commits (when inside a git repo)
 
-If a checkpoint with the same name already exists, you'll be asked before it's overwritten.
+If a checkpoint with the same name already exists, you'll be asked before it's overwritten. You can also invoke the skill directly with just the name: `/context-checkpoint:save-context auth-work`.
 
 ### `/context-checkpoint:load-context`
 
@@ -57,8 +58,33 @@ Loads a previously saved checkpoint and re-establishes the context conversationa
 - `"restore session feature-xyz"`
 - `"resume work on payment-refactor"`
 - `"continue where we left off on db-migration"`
+- `"load context"` (without a name — displays a menu of available checkpoints)
 
-If no name is provided, the available checkpoints in `.memory/` are listed. If the named file isn't found, the closest match is suggested.
+Invoking the skill with no name — including a bare `/context-checkpoint:load-context` — displays an interactive menu of all available checkpoints in `.memory/`. If the named file isn't found, the closest match is suggested.
+
+### `/context-checkpoint:update-context`
+
+Refreshes an existing checkpoint by merging the preserved content with a new session summary.
+
+**Trigger phrases:**
+- `"update context auth-work"`
+- `"refresh checkpoint feature-xyz"`
+- `"update saved context payment-refactor"`
+- `"sync checkpoint db-migration"`
+- `"update context"` (without a name — displays a menu of available checkpoints)
+
+**What gets replaced:**
+- **Current State** — always replaced with the current status
+- **Next Steps** — re-derived; completed items are marked `- [x]`, new items are added
+- **Saved date and git state** — always updated to the current date and branch
+
+**What gets merged:**
+- **Goal** — preserved; updated only if the session has clearly pivoted to a different objective
+- **Key Files** — old relevant entries kept, new files added, stale entries removed
+- **Decisions Made** — existing decisions kept; new ones from this session appended
+- **Notes** — still-relevant notes kept; new discoveries appended
+
+If no name is provided, the available checkpoints are listed. If the named file doesn't exist, you'll be prompted to create it with `save-context` first.
 
 ## Checkpoint file format
 

@@ -1,6 +1,6 @@
 ---
 name: load-context
-description: This skill should be used when the user asks to "load context", "restore session", "resume work on X", "load saved context", "recall X", "bring back X", "continue where we left off on X", "load X", "restore X", or "open context X". Use when the user references a previously saved work state by name.
+description: This skill should be used when the user asks to "load context", "restore session", "resume work on X", "load saved context", "recall X", "bring back X", "continue where we left off on X", "load X", "restore X", or "open context X". Use when the user references a previously saved work state by name. Also use when the user invokes /context-checkpoint:load-context with no arguments — display an interactive menu of available checkpoints instead of failing.
 ---
 
 # Load Context
