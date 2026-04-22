@@ -5,13 +5,12 @@
     "email": "george.benjamin@gmail.com"
   },
   "metadata": {
-    "description": "Claude Code plugins by George Benjamin",
-    "pluginRoot": "./plugins"
+    "description": "Claude Code plugins by George Benjamin"
   },
   "plugins": [
     {
       "name": "context-checkpoint",
-      "source": "context-checkpoint",
+      "source": "./plugins/context-checkpoint",
       "description": "Save and restore named session checkpoints across Claude Code sessions.",
       "category": "productivity"
     }
